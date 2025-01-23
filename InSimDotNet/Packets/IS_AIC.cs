@@ -16,7 +16,7 @@ namespace InSimDotNet.Packets
 
         public byte PLID { get; set; }
 
-        public byte Input { get; set; }
+        public AIControlInput Input { get; set; }
 
         public int Value { get; set; }
 
@@ -35,7 +35,7 @@ namespace InSimDotNet.Packets
             ReqI = reader.ReadByte();
             reader.Skip(1);
             PLID = reader.ReadByte();
-            Input = reader.ReadByte();
+            Input = (AIControlInput)reader.ReadByte();
             Value = (int)reader.ReadUInt16();
         }
 
@@ -47,7 +47,7 @@ namespace InSimDotNet.Packets
             writer.Write(ReqI);
             writer.Skip(1);
             writer.Write(PLID);
-            writer.Write(Input);
+            writer.Write((byte)Input);
             writer.Write((ushort)Value);
             return writer.GetBuffer();
         }
