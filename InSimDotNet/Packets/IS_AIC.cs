@@ -14,11 +14,11 @@ namespace InSimDotNet.Packets
 
         public byte ReqI { get; set; }
 
-        byte PLID { get; set; }
+        public byte PLID { get; set; }
 
-        byte Input { get; set; }
+        public byte Input { get; set; }
 
-        int Value { get; set; }
+        public int Value { get; set; }
 
         public IS_AIC()
         {
