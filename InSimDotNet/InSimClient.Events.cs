@@ -268,7 +268,9 @@ namespace InSimDotNet
         /// </summary>
         public event EventHandler<PacketEventArgs<IS_IPB>> IS_IPB;
 
-        public event EventHandler<PacketEventArgs<IS_AIC>> IS_AIC;
+        /// <summary>
+        /// 
+        /// </summary>
         public event EventHandler<PacketEventArgs<IS_AII>> IS_AII;
 
         public static PacketType GetPacketType(byte[] buffer)
@@ -443,9 +445,6 @@ namespace InSimDotNet
                     break;
                 case PacketType.ISP_IPB:
                     OnIS_IPB(new PacketEventArgs<IS_IPB>(new IS_IPB(packet)));
-                    break;
-                case PacketType.ISP_AIC:
-                    OnIS_AIC(new PacketEventArgs<IS_AIC>(new IS_AIC(packet)));
                     break;
                 case PacketType.ISP_AII:
                     OnIS_AII(new PacketEventArgs<IS_AII>(new IS_AII(packet)));
@@ -711,11 +710,6 @@ namespace InSimDotNet
         protected virtual void OnIS_IPB(PacketEventArgs<IS_IPB> e)
         {
             IS_IPB?.Invoke(this, e);
-        }
-
-        protected virtual void OnIS_AIC(PacketEventArgs<IS_AIC> e)
-        {
-            IS_AIC?.Invoke(this, e);
         }
 
         protected virtual void OnIS_AII(PacketEventArgs<IS_AII> e)
