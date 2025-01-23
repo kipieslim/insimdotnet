@@ -344,6 +344,16 @@
         ISP_IPB,
 
         /// <summary>
+        /// AI Control
+        /// </summary>
+        ISP_AIC,
+
+        /// <summary>
+        /// AI Info
+        /// </summary>
+        ISP_AII,
+
+        /// <summary>
         /// Admin request
         /// </summary>
         IRP_ARQ = 250,
