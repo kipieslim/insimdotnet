@@ -61,5 +61,40 @@ namespace InSimDotNet.Out {
         /// Anti-lock brakes active.
         /// </summary>
         DL_ABS = 1024,
+
+        /// <summary>
+        /// Engine damage
+        /// </summary>
+        DL_ENGINE = 2048,
+
+        /// <summary>
+        /// Rear fog light activated
+        /// </summary>
+        DL_FOG_REAR = 4096,
+
+        /// <summary>
+        /// Front fog light activated
+        /// </summary>
+        DL_FOG_FRONT = 8192,
+
+        /// <summary>
+        /// Dipped headlights
+        /// </summary>
+        DL_DIPPED = 16384,
+
+        /// <summary>
+        /// Low fuel warning lgith
+        /// </summary>
+        DL_FUELWARN = 32768,
+        
+        /// <summary>
+        /// Sidelights
+        /// </summary>
+        DL_SIDELIGHTS = 65536,
+
+        /// <summary>
+        /// Neutral Lights
+        /// </summary>
+        DL_NEUTRAL = 131072
     }
 }
