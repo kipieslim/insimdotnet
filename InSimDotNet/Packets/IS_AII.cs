@@ -1,4 +1,6 @@
-﻿namespace InSimDotNet.Packets
+﻿using InSimDotNet.Out;
+
+namespace InSimDotNet.Packets
 {
     public class IS_AII : IPacket
     {
@@ -18,7 +20,7 @@
 
         public float RPM { get; private set; }
 
-        public uint ShowLights { get; private set; }
+        public DashLightFlags ShowLights { get; private set; }
 
         public IS_AII()
         {
@@ -39,7 +41,7 @@
             reader.Skip(2);
             RPM = reader.ReadSingle();
             reader.Skip(8);
-            ShowLights = reader.ReadUInt32();
+            ShowLights = (DashLightFlags)reader.ReadUInt32();
             reader.Skip(12);
         }
     }
