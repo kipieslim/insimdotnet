@@ -23,7 +23,10 @@
         CS_FOGREAR = 18,
         CS_FOGFRONT = 19,
         CS_NUM = 20,
-        CS_RESETALL = 254,
-        CS_STOPCONTROL = 255
+        CS_SEND_AI_INFO = 240,
+        CS_SEND_REPEAT_AI_INFO = 241,
+        CS_SET_HELP_FLAGS = 253,
+        CS_RESET_INPUTS = 254,
+        CS_STOP_CONTROL = 255
     }
 }
