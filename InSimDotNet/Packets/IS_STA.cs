@@ -75,6 +75,11 @@ namespace InSimDotNet.Packets {
         public byte RaceLaps { get; private set; }
 
         /// <summary>
+        /// Gets the server status (0 = unknown, 1 = success, >1 = fail)
+        /// </summary>
+        public byte ServerStatus { get; private set; }
+
+        /// <summary>
         /// Gets the current track.
         /// </summary>
         public string Track { get; private set; }
@@ -119,7 +124,8 @@ namespace InSimDotNet.Packets {
             RaceInProg = reader.ReadByte();
             QualMins = reader.ReadByte();
             RaceLaps = reader.ReadByte();
-            reader.Skip(2);
+            reader.Skip(1);
+            ServerStatus = reader.ReadByte();
             Track = reader.ReadString(6);
             Weather = reader.ReadByte();
             Wind = reader.ReadByte();
