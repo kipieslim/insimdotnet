@@ -59,8 +59,8 @@
         SMALL_LCL = 10,
 
         /// <summary>
-        /// get local AI info
+        /// Get local AI info
         /// </summary>
-        SMALL_AII = 11,
+        SMALL_AII = 11
     }
 }

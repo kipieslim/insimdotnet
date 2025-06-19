@@ -267,9 +267,9 @@ namespace InSimDotNet
         /// set ip bans
         /// </summary>
         public event EventHandler<PacketEventArgs<IS_IPB>> IS_IPB;
-        
+
         /// <summary>
-        /// set ip bans
+        /// 
         /// </summary>
         public event EventHandler<PacketEventArgs<IS_AII>> IS_AII;
 
@@ -711,7 +711,7 @@ namespace InSimDotNet
         {
             IS_IPB?.Invoke(this, e);
         }
-        
+
         protected virtual void OnIS_AII(PacketEventArgs<IS_AII> e)
         {
             IS_AII?.Invoke(this, e);

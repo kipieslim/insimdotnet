@@ -344,7 +344,7 @@
         ISP_IPB,
 
         /// <summary>
-        /// AI Control 
+        /// AI Control
         /// </summary>
         ISP_AIC,
 

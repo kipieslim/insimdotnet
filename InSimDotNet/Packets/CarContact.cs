@@ -25,15 +25,22 @@ namespace InSimDotNet.Packets {
         /// </summary>
         public byte ThrBrk { get; private set; }
 
+        public byte Throttle { get; private set; }
+        public byte Brake { get; private set; }
+
         /// <summary>
         /// Gets the combined clutch and handbrake (high 4 bits : clutch / low 4 bits : handbrake (0 to 15)).
         /// </summary>
         public byte CluHan { get; private set; }
+        public byte Clutch { get; private set; }
+        public byte Handbrake { get; private set; }
 
         /// <summary>
         /// Gets the current gear (high 4 bits : gear (15=R) / low 4 bits : spare).
         /// </summary>
         public byte GearSp { get; private set; }
+
+        public byte Gear { get; private set; }
 
         /// <summary>
         /// Gets the speed in meters/per second.
@@ -84,8 +91,13 @@ namespace InSimDotNet.Packets {
             reader.Skip(1);
             Steer = reader.ReadSByte();
             ThrBrk = reader.ReadByte();
+            Throttle = (byte)((ThrBrk >> 4) & 0xF);
+            Brake = (byte)(ThrBrk & 0xF);
             CluHan = reader.ReadByte();
+            Clutch = (byte)((CluHan >> 4) & 0xF);
+            Handbrake = (byte)(CluHan & 0xF);
             GearSp = reader.ReadByte();
+            Gear = (byte)((GearSp >> 4) & 0xF);
             Speed = reader.ReadByte();
             Direction = reader.ReadByte();
             Heading = reader.ReadByte();

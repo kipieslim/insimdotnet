@@ -62,37 +62,37 @@ namespace InSimDotNet.Out {
         DL_ABS = 1024,
 
         /// <summary>
-        /// engine damage
+        /// Engine damage
         /// </summary>
         DL_ENGINE = 2048,
 
         /// <summary>
-        /// Fog rear
+        /// Rear fog light activated
         /// </summary>
         DL_FOG_REAR = 4096,
 
         /// <summary>
-        /// Fog front
+        /// Front fog light activated
         /// </summary>
         DL_FOG_FRONT = 8192,
 
         /// <summary>
-        /// dipped headlight symbol
+        /// Dipped headlights
         /// </summary>
         DL_DIPPED = 16384,
 
         /// <summary>
-        /// low fuel warning light
+        /// Low fuel warning light
         /// </summary>
         DL_FUELWARN = 32768,
-
+        
         /// <summary>
-        /// sidelights symbol
+        /// Sidelights
         /// </summary>
         DL_SIDELIGHTS = 65536,
 
         /// <summary>
-        /// sidelights symbol
+        /// Neutral Lights
         /// </summary>
         DL_NEUTRAL = 131072,
 

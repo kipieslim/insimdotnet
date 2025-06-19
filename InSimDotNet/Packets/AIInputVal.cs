@@ -1,4 +1,4 @@
-﻿namespace InSimDotNet.Packets
+namespace InSimDotNet.Packets
 {
     /// <summary>
     /// Class for the <see cref="IS_AIC"/> Info collection.
