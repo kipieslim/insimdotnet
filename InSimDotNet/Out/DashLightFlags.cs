@@ -85,7 +85,7 @@ namespace InSimDotNet.Out {
         /// Low fuel warning light
         /// </summary>
         DL_FUELWARN = 32768,
-        
+
         /// <summary>
         /// Sidelights
         /// </summary>

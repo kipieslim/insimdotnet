@@ -7,9 +7,10 @@ namespace InSimDotNet.Packets {
     [Flags]
     public enum ButtonStyles {
         /// <summary>
-        /// Colour 0: Light grey.
+        /// Colour 0: Light gray.
         /// </summary>
         ISB_C0 = 0,
+
         /// <summary>
         /// Colour 1: Title colour.
         /// </summary>
@@ -26,22 +27,22 @@ namespace InSimDotNet.Packets {
         ISB_C3 = 3,
 
         /// <summary>
-        /// Colour 4: ok
+        /// Colour 4: Ok
         /// </summary>
         ISB_C4 = 4,
 
         /// <summary>
-        /// Colour 5: cancel
+        /// Colour 5: Cancel
         /// </summary>
         ISB_C5 = 5,
 
         /// <summary>
-        /// Colour 6: text string
+        /// Colour 6: Text string
         /// </summary>
         ISB_C6 = 6,
 
         /// <summary>
-        /// Colour 7: unavailable
+        /// Colour 7: Unavailable
         /// </summary>
         ISB_C7 = 7,
 
